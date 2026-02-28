@@ -78,11 +78,9 @@ HireSight-AI/
 
 ## 🎬 Live Demo
 
-![App Demo](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)  
-> Demo showing resume upload, skill analysis, and AI scoring (replace with your actual GIF or video)  
-
-**Live Demo URL (if hosted):**  
-[https://hiresight.example.com](https://hiresight.example.com)  
+![App Demo](HireSight-AI.mp4)  
+> Demo showing resume upload, skill analysis, and AI scoring. 
+  
 
 ---
 
