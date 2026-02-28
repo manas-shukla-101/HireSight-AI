@@ -22,6 +22,7 @@
 8. [GitHub Upload Guidelines](#-github-upload-guidelines)  
 9. [Why HireSight AI](#-why-hiresight-ai)  
 10. [Roadmap](#-roadmap)
+11. [Socials](#-socials-)
 
 ---
 
