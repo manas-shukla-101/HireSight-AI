@@ -49,7 +49,7 @@
 | Reporting | PDF generation via `reports.py` |
 
 **Architecture Diagram (conceptual):**  
-![Architecture Diagram](https://via.placeholder.com/700x400.png?text=Architecture+Diagram+Placeholder)
+![Architecture Diagram](architecture-diagram.svg)
 
 ---
 
