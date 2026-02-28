@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>Dashboard</h1>
+  <div class="metrics">
+    <div class="metric">
+      <span>Total Analyses</span>
+      <strong>{{ total_analyses }}</strong>
+    </div>
+    <div class="metric">
+      <span>Average Match Score</span>
+      <strong>{{ avg_score }}%</strong>
+    </div>
+    <div class="metric">
+      <span>Status</span>
+      <strong>Active</strong>
+    </div>
+  </div>
+
+  <div class="chart-wrap">
+    <canvas id="scoreChart" data-scores='{{ scores | tojson }}'></canvas>
+  </div>
+</section>
+{% endblock %}

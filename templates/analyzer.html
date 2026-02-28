@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>Resume Analyzer</h1>
+  <form method="post" enctype="multipart/form-data" class="stacked">
+    <label>Resume (PDF)</label>
+    <input type="file" name="resume" accept="application/pdf" required>
+
+    <label>Job Description</label>
+    <textarea name="job_description" rows="10" placeholder="Paste the JD here..." required></textarea>
+
+    <button type="submit">Analyze Resume</button>
+  </form>
+</section>
+
+{% if analysis %}
+<section class="card">
+  <h2>Analysis Result</h2>
+  <div class="metrics">
+    <div class="metric">
+      <span>Match Score</span>
+      <strong>{{ (analysis.score * 100) | round(2) }}%</strong>
+    </div>
+    <div class="metric">
+      <span>Grade</span>
+      <strong>{{ analysis.grade }}</strong>
+    </div>
+    <div class="metric">
+      <span>Matched Skills</span>
+      <strong>{{ analysis.matched_skills | length }}</strong>
+    </div>
+  </div>
+
+  <div class="split">
+    <div>
+      <h3>Matched Skills</h3>
+      <p>{{ analysis.matched_skills | join(', ') if analysis.matched_skills else 'None found' }}</p>
+
+      <h3>Strengths</h3>
+      <ul>
+        {% for item in analysis.strengths %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <h3>Missing Skills</h3>
+      <p>{{ analysis.missing_skills | join(', ') if analysis.missing_skills else 'No major skill gaps detected' }}</p>
+
+      <h3>Recommendations</h3>
+      <ul>
+        {% for item in analysis.recommendations %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <form method="post" action="{{ url_for('download_report') }}">
+    <input type="hidden" name="analysis_payload" value='{{ analysis | tojson }}'>
+    <button type="submit">Download Report</button>
+  </form>
+</section>
+{% endif %}
+{% endblock %}

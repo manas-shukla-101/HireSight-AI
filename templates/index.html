@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Smart Resume Analyzer</h1>
+  <p>Advanced AI matching, skill-gap detection, and role-fit insights.</p>
+</section>
+
+<section class="card auth-grid">
+  <form method="post" class="form-panel">
+    <h2>Login</h2>
+    <input type="hidden" name="action" value="login">
+    <label>Username</label>
+    <input name="username" required />
+    <label>Password</label>
+    <input name="password" type="password" required />
+    <button type="submit">Login</button>
+  </form>
+
+  <form method="post" class="form-panel">
+    <h2>Register</h2>
+    <input type="hidden" name="action" value="register">
+    <label>Username</label>
+    <input name="username" required />
+    <label>Password</label>
+    <input name="password" type="password" required />
+    <button type="submit">Create Account</button>
+  </form>
+</section>
+
+<p class="hint">Default admin account: <code>admin / admin123</code> (change after first login).</p>
+{% endblock %}

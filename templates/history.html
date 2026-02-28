@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>Analysis History</h1>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Match Score</th>
+          <th>Grade</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row.filename or 'N/A' }}</td>
+          <td>{{ (row.match_score * 100) | round(2) }}%</td>
+          <td>{{ row.grade }}</td>
+          <td>{{ row.created_at }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4">No analyses yet.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
