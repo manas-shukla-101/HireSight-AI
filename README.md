@@ -78,7 +78,7 @@ HireSight-AI/
 
 ## 🎬 Live Demo
 
-![App Demo](HireSight-AI.mp4)  
+![App Demo](HireSight-AI.gif)  
 > Demo showing resume upload, skill analysis, and AI scoring. 
   
 
