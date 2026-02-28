@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #0f172a; }
+      .label { font: 600 16px Arial, sans-serif; fill: #0f172a; }
+      .text { font: 14px Arial, sans-serif; fill: #1f2937; }
+      .small { font: 12px Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #1e293b; stroke-width: 2; rx: 12; ry: 12; }
+      .group { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; rx: 14; ry: 14; }
+      .arrow { stroke: #334155; stroke-width: 2.2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="900" fill="#eef2ff"/>
+  <text x="40" y="52" class="title">HireSight AI - Architecture Diagram</text>
+
+  <!-- User -->
+  <rect class="box" x="60" y="140" width="200" height="90"/>
+  <text x="120" y="176" class="label">User Browser</text>
+  <text x="106" y="200" class="small">(Desktop / Mobile)</text>
+
+  <!-- Flask -->
+  <rect class="box" x="330" y="130" width="240" height="110"/>
+  <text x="390" y="176" class="label">Flask App</text>
+  <text x="420" y="200" class="small">app.py</text>
+
+  <!-- UI Group -->
+  <rect class="group" x="640" y="80" width="300" height="220"/>
+  <text x="760" y="108" class="label">Frontend UI</text>
+  <rect class="box" x="670" y="125" width="240" height="65"/>
+  <text x="725" y="162" class="text">templates/*.html</text>
+  <rect class="box" x="670" y="205" width="240" height="65"/>
+  <text x="710" y="242" class="text">static/css + static/js</text>
+
+  <!-- Auth Group -->
+  <rect class="group" x="300" y="290" width="300" height="220"/>
+  <text x="400" y="320" class="label">Authentication</text>
+  <rect class="box" x="330" y="345" width="240" height="65"/>
+  <text x="420" y="382" class="text">auth.py</text>
+  <rect class="box" x="330" y="425" width="240" height="65"/>
+  <text x="362" y="462" class="text">Werkzeug + Legacy SHA256</text>
+
+  <!-- NLP Group -->
+  <rect class="group" x="640" y="320" width="700" height="280"/>
+  <text x="910" y="350" class="label">AI / NLP Engine</text>
+  <rect class="box" x="670" y="375" width="190" height="60"/>
+  <text x="740" y="410" class="text">utils.py</text>
+  <rect class="box" x="885" y="375" width="210" height="60"/>
+  <text x="925" y="410" class="text">PyPDF2 Extract</text>
+  <rect class="box" x="1120" y="375" width="190" height="60"/>
+  <text x="1170" y="410" class="text">spaCy NLP</text>
+
+  <rect class="box" x="670" y="460" width="220" height="60"/>
+  <text x="705" y="495" class="text">Sentence Transformer</text>
+  <rect class="box" x="915" y="460" width="180" height="60"/>
+  <text x="948" y="495" class="text">Cosine Similarity</text>
+  <rect class="box" x="1120" y="460" width="190" height="60"/>
+  <text x="1138" y="495" class="text">Skill Gap + Advice</text>
+
+  <!-- Data Group -->
+  <rect class="group" x="300" y="560" width="300" height="240"/>
+  <text x="400" y="590" class="label">Data Layer</text>
+  <rect class="box" x="330" y="615" width="240" height="65"/>
+  <text x="402" y="652" class="text">database.py</text>
+  <rect class="box" x="330" y="695" width="240" height="80"/>
+  <text x="372" y="733" class="text">SQLite (hiresight.db)</text>
+  <text x="350" y="753" class="small">users, history, timestamps</text>
+
+  <!-- Reports -->
+  <rect class="group" x="640" y="640" width="300" height="160"/>
+  <text x="735" y="670" class="label">Reports</text>
+  <rect class="box" x="670" y="695" width="240" height="70"/>
+  <text x="755" y="725" class="text">reports.py</text>
+  <text x="723" y="745" class="small">Downloadable report output</text>
+
+  <!-- Route labels -->
+  <text x="350" y="265" class="small">/, /dashboard, /analyze, /history, /admin, /download-report</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M260 185 L330 185"/>
+  <path class="arrow" d="M570 165 L640 165"/>
+  <path class="arrow" d="M570 205 L640 235"/>
+
+  <path class="arrow" d="M450 240 L450 290"/>
+  <path class="arrow" d="M570 210 L760 375"/>
+  <path class="arrow" d="M450 510 L450 560"/>
+  <path class="arrow" d="M570 220 L760 640"/>
+
+  <path class="arrow" d="M860 405 L885 405"/>
+  <path class="arrow" d="M1095 405 L1120 405"/>
+  <path class="arrow" d="M890 490 L915 490"/>
+  <path class="arrow" d="M1095 490 L1120 490"/>
+</svg>
+
