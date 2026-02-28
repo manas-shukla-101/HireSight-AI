@@ -90,7 +90,7 @@ HireSight-AI/
 
 1. **Clone the repository:**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/manas-shukla-101/HireSight-AI
 cd HireSight-AI
 ```
 2. **Create and activate a virtual environment:**
